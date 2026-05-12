@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs y checkpoints (los pesados no van al repo)
+logs/
+wandb/
+lightning_logs/
+*.log
+
+# Modelos pesados: NO se versionan en git, los subimos como artifacts a W&B
+models/*.ckpt
+models/*.pt
+models/*.bin
+
+# Datos cacheados por HuggingFace
+data/
+.cache/
+
+# Notebooks: outputs limpios al subir (opcional, recomendado)
+.ipynb_checkpoints/
+
+# Docker
+*.tar
+
+# Variables de entorno (¡NUNCA subir API keys!)
+.env
+.env.local

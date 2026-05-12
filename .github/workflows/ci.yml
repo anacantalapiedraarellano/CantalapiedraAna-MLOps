@@ -1,0 +1,44 @@
+# =============================================================================
+# CI con GitHub Actions
+# Sigue el patrón visto en clase (slide 25 tema 5):
+#   - Checkout del código
+#   - Configurar Python
+#   - Instalar dependencias
+#   - Ejecutar tests con pytest
+#
+# Se dispara en push a main y en pull_request.
+# =============================================================================
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Bajar el código del repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Configurar Python (versión idéntica a la del Dockerfile)
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"  # cachea las dependencias entre runs para acelerar
+
+      # 3. Instalar dependencias del proyecto
+      - name: Dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 4. Ejecutar tests rápidos (excluimos los lentos para CI ágil)
+      #    Los tests "slow" entrenan el modelo en mini-batch (~3 min)
+      #    y no aportan mucho en cada push.
+      - name: Ejecutar tests
+        run: pytest -v -m "not slow"

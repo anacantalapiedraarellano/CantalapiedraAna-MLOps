@@ -1,0 +1,29 @@
+# --- Core ML/DL (versiones del notebook) ---
+torch==2.1.0
+pytorch-lightning==2.1.0
+torchmetrics==1.2.0
+transformers==4.48.1
+datasets==2.14.6
+sentence-transformers==3.4.0
+peft==0.7.1
+
+# --- Tracking de experimentos ---
+wandb==0.26.1
+
+# --- API ---
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+pydantic==2.6.4
+
+# --- Utilidades ---
+numpy==1.26.4
+pandas==2.2.1
+scipy==1.12.0
+tqdm==4.66.2
+
+# --- Testing ---
+pytest==8.1.1
+httpx==0.27.0   # cliente para testear la API
+pyarrow==13.0.0
+
+# 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

@@ -1,0 +1,60 @@
+# =============================================================================
+# .dockerignore: archivos que NO se copian al build context de Docker.
+# Reduce el tamaño de la imagen y acelera el build.
+# Basado en el patrón visto en clase (slide 23 tema 4).
+# =============================================================================
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs y artefactos de entrenamiento (no van en producción)
+logs/
+lightning_logs/
+wandb/
+
+# Notebooks y datos crudos (no se sirven desde la API)
+notebooks/
+data/
+*.ipynb
+.ipynb_checkpoints/
+
+# Tests (no se necesitan en la imagen de producción)
+tests/
+pytest.ini
+.pytest_cache/
+
+# Configuración local / secretos (¡NUNCA en una imagen pública!)
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentación
+README.md
+*.md
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Docker (no nos copiamos a nosotros mismos)
+Dockerfile
+.dockerignore
+
+# CI
+.github/
