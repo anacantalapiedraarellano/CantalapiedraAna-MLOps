@@ -46,3 +46,6 @@ data/
 # Variables de entorno (¡NUNCA subir API keys!)
 .env
 .env.local
+
+# Checkpoints:
+checkpoints/
