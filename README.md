@@ -49,7 +49,7 @@ disponibles para descarga (ver sección *Configuración del entorno local*).
 - **Repositorio GitHub:** https://github.com/anacantalapiedraarellano/CantalapiedraAna-MLOps
 - **Weights & Biases (proyecto):** https://wandb.ai/anacantalapiedra-lab/sts-mlops
 - **Weights & Biases (Report):** https://wandb.ai/anacantalapiedra-lab/sts-mlops/reports/An-lisis-comparativo-Similitud-Textual-Sem-ntica-con-Cross-encoder-LoRA--VmlldzoxNjg3ODk0Nw
-- **Endpoint en producción (Hugging Face Spaces):** https://anacantalapiedraarellano-sts-mlops.hf.space
+- **Endpoint en producción (Hugging Face Spaces):** https://huggingface.co/spaces/anacantalapiedraarellano/sts-mlops
 - **Documentación interactiva de la API:** https://anacantalapiedraarellano-sts-mlops.hf.space/docs
 
 ## Estructura del proyecto
