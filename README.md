@@ -171,10 +171,8 @@ Para ejecutar la API en local, descarga `best_model.ckpt` y colócalo en la carp
 ​```
 models/best_model.ckpt
 ​```
-
 > Nota: la API en producción (Hugging Face Spaces) ya incluye el modelo embebido,
 > por lo que puede probarse directamente sin necesidad de descargar nada.
-```
 
 ---
 
