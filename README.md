@@ -41,6 +41,9 @@ en CPU superaba la hora de ejecución. Por ello:
   script `scripts/relog_experiments.py`, que registra en W&B los resultados (métricas
   época a época, hiperparámetros y checkpoints) **sin necesidad de reentrenar**.
 
+Los checkpoints de los cinco experimentos y el modelo en producción están
+disponibles para descarga (ver sección *Configuración del entorno local*).
+
 ## Enlaces del proyecto
 
 - **Repositorio GitHub:** https://github.com/anacantalapiedraarellano/CantalapiedraAna-MLOps
@@ -152,11 +155,25 @@ pip install -r requirements.txt
 
 ### 3. Colocar el checkpoint del modelo
 
-El checkpoint del modelo (`best_model.ckpt`) no se versiona en Git por su tamaño.
-Debe colocarse manualmente en la carpeta `models/`:
+Los checkpoints de los modelos no se versionan en Git ni se incluyen en el
+entregable comprimido por su tamaño (varios cientos de MB cada uno). Están
+disponibles para descarga en los siguientes enlaces:
 
-```
+- **Modelo en producción** (`best_model.ckpt`, Experimento 4 - Cross-encoder + LoRA):
+  [DESCARGAR AQUÍ](https://drive.google.com/file/d/1evBOR9s8RZyvkmVodi5wL6Q72tqQZlpn/view?usp=drive_link)
+- **Todos los experimentos** (carpeta `checkpoints/` con los 5 modelos, sus métricas
+  y logs, usada por el script de relogging a W&B):
+  [DESCARGAR AQUÍ](https://drive.google.com/drive/folders/130PImhqoHgJt8VHgFtt6MPLF_AT3LaBK?usp=drive_link)
+
+Para ejecutar la API en local, descarga `best_model.ckpt` y colócalo en la carpeta
+`models/`:
+
+​```
 models/best_model.ckpt
+​```
+
+> Nota: la API en producción (Hugging Face Spaces) ya incluye el modelo embebido,
+> por lo que puede probarse directamente sin necesidad de descargar nada.
 ```
 
 ---
