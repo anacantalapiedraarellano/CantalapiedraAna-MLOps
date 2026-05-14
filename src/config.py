@@ -58,4 +58,4 @@ LOGS_DIR = "logs"
 # W&B
 # -----------------------------------------------------------------------------
 WANDB_PROJECT = "sts-mlops"
-WANDB_ENTITY = None  # Se rellena con el username de W&B (o se deja None)
+WANDB_ENTITY = "anacantalapiedraarellano-lab"  # Se rellena con el username de W&B (o se deja None)
